@@ -7,6 +7,32 @@ Install-Module MSOnline
 #Autenticação na conta
 Connect-MsolService
 
+cls
+
+Write-Host "========================================================================================== "
+Write-Host "                      Relatório de status de MFA - Microsoft 365"
+Write-Host "                      Criado por: JamesTran"
+Write-Host "                      Personalizado por: Wanderson Silva"
+Write-Host "========================================================================================== "
+
+Write-Host " "
+Write-Host " "
+
+Write-Host "Um momento. Gerando o relatório de status de MFA"
+Write-Host "o ARQUIVO FICARÁ DISPONIVEL no diretório c:\Temp-report-mfa\"
+
+Write-Host " "
+Write-Host " "
+
+Write-Host "========================================================================================== "
+Write-Host "                       Relatório de status de MFA - Microsoft 365"
+Write-Host "========================================================================================== "
+
+Start-Sleep -Seconds 30
+
+
+cls
+
 Write-Host "Finding Azure Active Directory Accounts..."
 $Users = Get-MsolUser -All | Where-Object { $_.UserType -ne "Guest" }
 $Report = [System.Collections.Generic.List[Object]]::new() # Create output file
@@ -81,17 +107,14 @@ Write-Host "Porém se você esperar 10 segundinhos eu vou gerar aqui pra você u
 
 Write-Host " "
 
-Start-Sleep -Seconds 30
-
-Write-Host " "
-
 Write-Host "Prontinhos ...."
 
+Write-Host " "
 Write-Host " "
 
 $Report | Select-Object UserPrincipalName, DisplayName, MFAState, MFADefaultMethod, MFAPhoneNumber | Sort-Object UserPrincipalName | Out-GridView
 
-Write-Host "Esse tela será fechada em 2 minutos ...."
+Write-Host "Essa tela será fechada em 2 Minutos ...."
 
 Write-Host " "
 Write-Host " "
