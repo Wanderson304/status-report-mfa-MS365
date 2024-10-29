@@ -91,7 +91,7 @@ Write-Host " "
 
 $Report | Select-Object UserPrincipalName, DisplayName, MFAState, MFADefaultMethod, MFAPhoneNumber | Sort-Object UserPrincipalName | Out-GridView
 
-Write-Host "Esse tela será fechada em 30 segundos ...."
+Write-Host "Esse tela será fechada em 2 minutos ...."
 
 Write-Host " "
 Write-Host " "
@@ -100,6 +100,6 @@ Write-Host "====================================================================
 Write-Host "                       Relatório de status de MFA - Microsoft 365"
 Write-Host "========================================================================================== "
 
-Start-Sleep -Seconds 30
+Start-Sleep -Seconds 120
 
 cls
