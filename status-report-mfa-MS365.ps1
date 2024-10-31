@@ -107,7 +107,7 @@ Write-Host "Porém se você esperar 10 segundinhos eu vou gerar aqui pra você u
 
 Write-Host " "
 
-Write-Host "Prontinhos ...."
+Write-Host "Prontinho ...."
 
 Write-Host " "
 Write-Host " "
