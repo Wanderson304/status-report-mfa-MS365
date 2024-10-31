@@ -1,4 +1,4 @@
-#Creídto doscript: JamesTran
+#Creídto do script: JamesTran
 #https://learn.microsoft.com/en-us/answers/questions/1343593/users-with-mfa-enabled-disabled-enforced
 
 #Instalação do modulo MSOnline
